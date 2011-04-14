@@ -1,6 +1,9 @@
 %%% @doc This modules defines a behavior mostly needed for supervisors
 %%%      after a release upgrade.
 -module (upgradable_supervisor).
+-author ("Damian T. Dobroczy\\'nski <qoocku@gmail.com>").
+-include ("vsn").
+
 -export ([init/3,
           behaviour_info/1,
           code_change/2]).

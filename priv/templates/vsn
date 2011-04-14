@@ -1,0 +1,2 @@
+-define (VSN, "{{vsn}}").
+-vsn (?VSN).
