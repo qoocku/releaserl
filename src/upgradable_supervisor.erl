@@ -26,7 +26,7 @@ init (Vsn, Module, Args) when is_atom(Module) ->
   Policy = Module:policy(Vsn, Args),
   Kids   = Module:children(Vsn, Args),
   put({?DBID, Vsn}, {Module, Args}), %% slight side effect but probably not dangerous
-  {ok, Policy, Kids}.
+  {ok, {Policy, Kids}}.
 
 %% @doc Designed to be called after supervisor release upgrade.
 %%      Kills unnecessary children (which are not included in the
